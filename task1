@@ -1,0 +1,47 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+data = pd.read_csv("ipl.csv")
+data.tail()
+data.info()
+total_matches=data.shape[0]
+total_matches  
+highest_margin_match = data[data['result_margin'] == data['result_margin'].max()]                                                                     
+winning_team = highest_margin_match                                                             
+winning_team  
+player_awards = data['player_of_match'].value_counts()
+players = player_awards.head(5)                                                       
+players   
+plt.figure(figsize=(10, 6))
+players.plot(kind='bar', color='skyblue')
+plt.title('Top 5 Players by Player of the Match Awards')
+plt.xlabel('Players')
+plt.ylabel('Number of Awards')
+plt.xticks(rotation=45)
+plt.show()
+team_counts =pd.concat([data['team1'], data['team2']]).value_counts()
+print(team_counts)
+plt.pie(team_counts, labels=team_counts.index, autopct='%1.1f%%')
+plt.show()
+team_wins = data['winner'].value_counts()
+most_wins = team_wins.max()                                                                                               
+least_wins = team_wins.min()                                                                                                                     
+most_wins_teams = team_wins[team_wins == most_wins]                                                                  
+least_wins_teams = team_wins[team_wins == least_wins]
+print("Teams with the most number of wins:")
+print(most_wins_teams)
+print("Teams with the least number of wins:")
+print(least_wins_teams)
+plt.figure(figsize=(10, 6))
+plt.scatter(team_wins.index, team_wins.values, color='blue', label='All Teams')
+plt.scatter(most_wins_teams.index, most_wins_teams.values, color='green', label='Most Wins')
+plt.scatter(least_wins_teams.index, least_wins_teams.values, color='red', label='Least Wins')
+plt.xlabel('Teams')
+plt.ylabel('Number of Wins')
+plt.title('Number of Wins by Team')
+plt.xticks(rotation=90)  # Rotate team names for better readability
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
