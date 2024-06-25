@@ -1,7 +1,11 @@
 **Name**:Rithik Anand
+
 **ID**:CT08DS2431
+
 **Domain**:Data Scientist
+
 **Duration**:June to July 2024
+
 
 
 ##Overview of the project
