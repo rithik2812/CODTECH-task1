@@ -8,22 +8,22 @@
 
 
 
-##Overview of the project
+## Overview of the project
 
 
-##Project: Explanatory data analysis (EDA) on ipl dataset.
+## Project: Explanatory data analysis (EDA) on ipl dataset.
 
 
-##objective: The objective of this project is to perform Explanatory data analysis(EDA) on ipls data from 2008 to 2020. we will LOOK into the data and statistics from the IPL, examining the trends, standout performances, and the transformation of the tournament
+## objective: The objective of this project is to perform Explanatory data analysis(EDA) on ipls data from 2008 to 2020. we will LOOK into the data and statistics from the IPL, examining the trends, standout performances, and the transformation of the tournament
 
 
-###key activities:
+### key activities:
 
 **Data cleaning**:Ensuring that the datset is free from consistencies.
 
 **Data visualisation**:Creating visualisations to understand data distribution.
 
-###Technologies used:
+### Technologies used:
 
 **Python**: primary programming language
 
